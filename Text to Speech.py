@@ -11,5 +11,6 @@ while True:
     a.setProperty('rate', 150)
     voices = a.getProperty('voices')
     a.setProperty('voice', voices[0].id)
+    #index 0 is for man voice and 1 for woman voice
     a.say(x)
     a.runAndWait()
