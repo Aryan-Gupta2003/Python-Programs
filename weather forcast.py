@@ -8,6 +8,7 @@ while True:
     city = input("Enter city: ")
     try:
         if city == "exit":
+            #Before exit say this
             s.say("Thank you .. Have a nice day")
             s.runAndWait()
             break
@@ -17,11 +18,13 @@ while True:
         temp = wdic["current"]["temp_c"]
         f1 = f"The current weather in {city} is {temp}"
         print(f1)
-        
+
+        #To say above data
         # rate = engine.getProperty('rate')
         s.setProperty('rate', 150)
         voices = s.getProperty('voices')
         s.setProperty('voice', voices[1].id)
+        #use voices[1] for woman voice and voices[0] for man voice
         s.say(f1)
         s.runAndWait()
     except:
